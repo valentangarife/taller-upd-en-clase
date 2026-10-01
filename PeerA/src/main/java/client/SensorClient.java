@@ -74,7 +74,7 @@ public class SensorClient {
             socketcito.send(datagramito);
 
             // TODO Paso 3.5: Crear un buffer receptor (byte[1024]) y un DatagramPacket para la respuesta.
-            byte[] responsebuffer = new byte[1024] //buffer para recibir la respuesta del servidor
+            byte[] responsebuffer = new byte[1024]; //buffer para recibir la respuesta del servidor
             // TODO Paso 3.6: Recibir la respuesta con socket.receive(responsePacket).
             DatagramPacket respuestaDatagramito = new DatagramPacket(responsebuffer, responsebuffer.length);
             socketcito.receive(respuestaDatagramito);

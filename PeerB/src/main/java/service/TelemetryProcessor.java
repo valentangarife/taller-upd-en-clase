@@ -85,9 +85,6 @@ public class TelemetryProcessor {
         }
 
         // TODO Paso 1.5: Guardar la lectura válida en 'lastReadings':
-        // lastReadings.put(deviceId, new TelemetryData(deviceId, sensorType, value));
-
-        //revisar:
         lastReadings.put(deviceId, new TelemetryData(deviceId, sensorType, value));
 
         // TODO Paso 1.6: Validar sensorType (TEMP, HUMIDITY, BATTERY) y evaluar rangos:
@@ -127,9 +124,9 @@ public class TelemetryProcessor {
                 } else {
                     return "OK;BATTERY_OK;" + value;
                 }
-                return "ERROR;UNKNOWN_SENSOR_TYPE";// "ERROR;NOT_IMPLEMENTED"; Reemplazar con su implementación
+            default:
+                return "ERROR;UNKNOWN_SENSOR_TYPE";
         }
-
     }
 
 
