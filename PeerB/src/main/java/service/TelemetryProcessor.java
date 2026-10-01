@@ -1,5 +1,4 @@
 package service;
-
 import model.TelemetryData;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -24,9 +23,13 @@ public class TelemetryProcessor {
      */
     public String process(String rawMessage) {
         // TODO Paso 1.1: Validar que el mensaje no sea nulo ni esté vacío (usar trim()).
-        // Si no es válido, retornar "ERROR;INVALID_FORMAT".
+        if (rawMessage == null || rawMessage.trim().isEmpty()) {
+            return "ERROR;INVALID_FORMAT"; // Si no es válido, retornar "ERROR;INVALID_FORMAT"
+        }
+
 
         // TODO Paso 1.2: Separar el mensaje usando el delimitador ";".
+        
         // Si el arreglo resultante está vacío, retornar "ERROR;INVALID_FORMAT".
 
         // TODO Paso 1.3: Si la primera parte es "STATUS" (ignorar mayúsculas/minúsculas):
