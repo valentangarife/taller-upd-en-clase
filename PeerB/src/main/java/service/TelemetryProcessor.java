@@ -28,8 +28,8 @@ public class TelemetryProcessor {
         }
 
 
+
         // TODO Paso 1.2: Separar el mensaje usando el delimitador ";".
-        
         // Si el arreglo resultante está vacío, retornar "ERROR;INVALID_FORMAT".
 
         // TODO Paso 1.3: Si la primera parte es "STATUS" (ignorar mayúsculas/minúsculas):
